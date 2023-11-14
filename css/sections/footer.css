@@ -45,6 +45,7 @@
     height: 42px;
     background-color: var(--secondary-color);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .footer__social li img {
