@@ -48,14 +48,46 @@
     line-height: 20px;
 }
 
-.header__menu li img {
+.mobile_header__menu {
+    list-style: none;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    background-color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.header__menu > li > img {
     width: 24px;
     height: 24px;
     object-fit: contain;
+}
+
+.hamburger-icon {
+    cursor: pointer;
 }
 
 .header__menu-mobile {
     display: none;
     gap: 20px;
     position: relative;
+}
+
+.cancel {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 35px;
 }

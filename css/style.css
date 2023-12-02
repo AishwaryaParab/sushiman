@@ -94,17 +94,6 @@ a {
   margin: 32px 0px;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.sushi__hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.sushi__hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 /* START: about us media queries */
 @media screen and (max-width: 1024px) {
   .about-us {
@@ -305,6 +294,22 @@ a {
 
   .trending__arrow {
     display: none;
+  }
+
+  .popular-foods__filters {
+    overflow-x: scroll;
+    justify-content: flex-start;
+    padding-bottom: 14px;
+  }
+
+  .popular-foods__filters::-webkit-scrollbar {
+    max-width: 5px;
+    height: 5px;
+  }
+
+  .popular-foods__filters::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
 

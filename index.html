@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <header id="header">
+  <header>
     <nav class="header__nav">
       <div class="header__logo">
         <h4 data-aos="fade-down">Sushiman</h4>
@@ -20,16 +20,24 @@
         <li><a href="#food">Food</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#about-us">About Us</a></li>
-        <li><img src="assets/search.svg" alt="search" /></li>
+        <!-- <li><img src="assets/search.svg" alt="search" /></li> -->
       </ul>
       
       <ul data-aos="fade-down" class="header__menu-mobile">
         <li>
-          <img src="assets/menu.svg" alt="menu" />
+          <img class="hamburger-icon" src="assets/menu.svg" alt="menu" />
         </li>
       </ul>
-
     </nav>
+
+    <!-- mobile responsive menu -->
+    <ul data-aos="fade-down" class="mobile_header__menu">
+      <img class="cancel" src="assets/cancel.png" />
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#food">Food</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about-us">About Us</a></li>
+    </ul>
   </header>
 
   <section class="hero">
@@ -53,10 +61,15 @@
           <button class="hero-content_order-button">Order Now</button>
           <button class="hero-content_play-button">
             <img src="assets/play-circle.svg" alt="play" />
-            How to Order
+            How to Eat Sushi
           </button>
         </div>
       </div>
+
+      <!-- Video -->
+      <iframe class="video-player" width="auto" height="315"
+        src="https://www.youtube.com/embed/auLmekEsaak">
+      </iframe>   
 
       <div class="hero-content__testimonial" data-aos="fade-up">
         <div class="hero-content__customer flex-center">
@@ -101,7 +114,7 @@
   <section class="popular-foods" id="menu">
     <h2 class="popular-foods__title" data-aos="flip-up">Popular Food / 人気</h2>
 
-    <div class="popular-foods__filters sushi__hide-scrollbar" data-aos="fade-up">
+    <div class="popular-foods__filters" data-aos="fade-up">
       <button class="popular-foods__filter-btn active">All</button>
       <button class="popular-foods__filter-btn">
         <img src="assets/sushi-9.png" alt="sushi" />
@@ -117,51 +130,419 @@
       </button>
       <button class="popular-foods__filter-btn">
         <img src="assets/sushi-6.png" alt="sushi" />
-        Danggo
+        Dango
       </button>
       <button class="popular-foods__filter-btn">Others</button>
     </div>
 
-    <div class="popular-foods__catalogue" data-aos="fade-up">
-      <!-- javascript -->
-      <article class="popular-foods__card">
-        <img class="popular-foods__card-image" src="assets/sushi-12.png" alt="sushi" />
-        <h4 class="popular-foods__card-title">Chezu Sushi</h4>
-        <div class="popular-foods__card-details flex-between">
-          <div class="popular-foods__card-rating">
-            <img src="assets/star.svg" alt="star" />
-            <p>4.9</p>
+    <div data-aos="fade-up">
+      <!-- all -->
+      <div class="all popular-foods__catalogue">
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi-12.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Chezu Sushi</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+  
+            <p class="popular-foods__card-price">$21.00</p>
           </div>
-
-          <p class="popular-foods__card-price">$21.00</p>
-        </div>
-      </article>
-
-      <article class="popular-foods__card active-card">
-        <img class="popular-foods__card-image" src="assets/sushi-11.png" alt="sushi" />
-        <h4 class="popular-foods__card-title">Original Sushi</h4>
-        <div class="popular-foods__card-details flex-between">
-          <div class="popular-foods__card-rating">
-            <img src="assets/star.svg" alt="star" />
-            <p>5.0</p>
+        </article>
+  
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi-11.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Original Sushi</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+  
+            <p class="popular-foods__card-price">$19.00</p>
           </div>
-
-          <p class="popular-foods__card-price">$19.00</p>
-        </div>
-      </article>
-
-      <article class="popular-foods__card">
-        <img class="popular-foods__card-image" src="assets/sushi-10.png" alt="sushi" />
-        <h4 class="popular-foods__card-title">Ramen Legendo</h4>
-        <div class="popular-foods__card-details flex-between">
-          <div class="popular-foods__card-rating">
-            <img src="assets/star.svg" alt="star" />
-            <p>4.7</p>
+        </article>
+  
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Temaki Sushi</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+  
+            <p class="popular-foods__card-price">$13.00</p>
           </div>
+        </article>
 
-          <p class="popular-foods__card-price">$13.00</p>
-        </div>
-      </article>
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/ramen-2.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Shoyu Ramen</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/ramen-3.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Tonkotsu</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi-8.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Ramen Legendo</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/udon-1.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Himokawa Udon</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/udon-2.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Sanuki Udon</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/udon-3.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Mimi Udon</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/dango-1.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Hanami Dango</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/dango-2.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Anko Dango</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi-6.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Mitarashi Dango</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/takoyaki-octopus-balls.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Takoyaki</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi-13.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Ikura Sushi</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/ramen-noodle-soup.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Torigara Ramen</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- sushi -->
+      <div class="popular-foods__catalogue">
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi-12.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Chezu Sushi</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+  
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+  
+        <article class="popular-foods__card active-card">
+          <img class="popular-foods__card-image" src="assets/sushi-11.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Original Sushi</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+  
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+  
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Temaki Sushi</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+  
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- ramen -->
+      <div class="popular-foods__catalogue">
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/ramen-2.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Shoyu Ramen</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card active-card">
+          <img class="popular-foods__card-image" src="assets/ramen-3.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Tonkotsu</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi-8.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Ramen Legendo</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- udon -->
+      <div class="popular-foods__catalogue">
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/udon-1.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Himokawa Udon</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card active-card">
+          <img class="popular-foods__card-image" src="assets/udon-2.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Sanuki Udon</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/udon-3.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Mimi Udon</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- danggo -->
+      <div class="popular-foods__catalogue">
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/dango-1.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Hanami Dango</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card active-card">
+          <img class="popular-foods__card-image" src="assets/dango-2.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Anko Dango</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/sushi-6.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Mitarashi Dango</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- others -->
+      <div class="popular-foods__catalogue">
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/takoyaki-octopus-balls.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Takoyaki</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.9</p>
+            </div>
+
+            <p class="popular-foods__card-price">$21.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card active-card">
+          <img class="popular-foods__card-image" src="assets/sushi-13.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Ikura Sushi</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>5.0</p>
+            </div>
+
+            <p class="popular-foods__card-price">$19.00</p>
+          </div>
+        </article>
+
+        <article class="popular-foods__card">
+          <img class="popular-foods__card-image" src="assets/ramen-noodle-soup.png" alt="sushi" />
+          <h4 class="popular-foods__card-title">Torigara Ramen</h4>
+          <div class="popular-foods__card-details flex-between">
+            <div class="popular-foods__card-rating">
+              <img src="assets/star.svg" alt="star" />
+              <p>4.7</p>
+            </div>
+
+            <p class="popular-foods__card-price">$13.00</p>
+          </div>
+        </article>
+      </div>
     </div>
 
     <button class="popular-foods__button">
@@ -309,7 +690,7 @@
 
   <footer class="footer flex-between">
     <h3 class="footer__logo">
-      <a href="#header"><span>Sushi</span>man</a>
+      <span>Sushi</span>man
     </h3>
 
     <ul class="footer__nav">

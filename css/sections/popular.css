@@ -22,7 +22,7 @@
 .popular-foods__filters {
     margin-top: 48px;
     max-width: 100%;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     display: flex;
     justify-content: center;
     gap: 24px;
@@ -58,11 +58,12 @@
 
 .popular-foods__catalogue {
     margin-top: 64px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
     gap: 56px;
+    display: none;
 }
 
 .popular-foods__button {
@@ -176,3 +177,10 @@
     font-size: 24px;
     color: var(--secondary-color);
 }
+
+/* TO DO
+1. Dongo width and height - 250px
+2. 3rd Sushi --> width: 150px, height: 150px
+
+
+*/
