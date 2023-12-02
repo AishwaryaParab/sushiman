@@ -52,7 +52,7 @@
     list-style: none;
     /* display: flex; */
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
     font-size: 16px;
     font-weight: 500;
     font-family: var(--plus-jakarta-sans);
@@ -62,7 +62,7 @@
     text-transform: uppercase;
     z-index: 10;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 72px);
     justify-content: center;
     align-items: center;
     display: none;
