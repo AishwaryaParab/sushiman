@@ -1,0 +1,31 @@
+.explore_popular-foods__catalogue {
+    margin-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 56px;
+}
+
+.explore_popular-foods__button img {
+    width: 14px;
+    height: 14px;
+    margin-right: 21px;
+    object-fit: contain;
+}
+
+.explore_popular-foods__button {
+    width: fit-content;
+    padding: 20px 30px;
+    margin: 80px auto 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: var(--plus-jakarta-sans);
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 64px;
+    cursor: pointer;
+}
